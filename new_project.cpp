@@ -161,7 +161,10 @@
 #include <climits>
 using namespace std;
 
+                                                //sum and multiplication of arrys elements
 
+
+                                                             
 // int sumANDmul(int arr[], int size){
 //     int sum = 0;
 //     int mul = 1;
@@ -175,59 +178,83 @@ using namespace std;
 //     return 0;
 
 // }
+                                                // swap the minumum and maximun number in arry
 
 
-int swapTHEmin(int arr[],int size){
-    int smallest = 0;
-    int largest = 0;
-    for(int i = 0 ; i<size; i++){
-        if(arr[i]<smallest){
-            smallest = i;
+// int swapTHEmin(int arr[],int size){
+//     int smallest = 0;
+//     int largest = 0;
+//     for(int i = 0 ; i<size; i++){
+//         if(arr[i]<smallest){
+//             smallest = i;
+//         }
+//         if(arr[i]>largest){
+//             largest = i;
+//         }
+//         }
+//         cout<<"minimum value is : "<<smallest<<endl;
+//         cout<<"maximum value is  : "<<largest<<endl; 
+//         swap(arr[smallest],arr[largest]);
+//         return 0;
+//     }
 
-        }
-        if(arr[i]>largest){
-            largest = i;
-        }
+                                                       // to print all the unique values in an array
+
+                                                       
+// int unique(int arr[],int size){
+//     for(int i = 0 ; i<size ; i++){
+//         int count = 0;
 
 
-        }
+//         for(int j = 0 ; j< size ; j++){
+//             if(arr[i]==arr[j]){
+//                 count++;
+//             }
+
+//         }
         
+//         if(count == 1)
+//             cout<<arr[i]<<" ";
         
-        cout<<"minimum value is : "<<smallest<<endl;
-        cout<<"maximum value is  : "<<largest<<endl; 
-        swap(arr[smallest],arr[largest]);
-        
+    
 
-        return 0;
-    }
+//     }
+//     return 0;
+// }
+
+                                                    
+                                                            //to print the intersection of 2 array
+
+// void intersection(int arr1[] ,int n ,int arr2[],int m){
+//     for(int i = 0; i<n; i++){
+//         for(int j = 0; j<m; j++){
+//             if(arr1[i]==arr2[j]){
+//                 cout<<arr1[i]<<" ";
+//                 break;
+//             }
+//         }
+//     }
+// }
 
 
 
 
-int main(){
-    int arr[] = {1,4,2,6,7};
-    int size= 5;
-    swapTHEmin(arr,size);
-    for(int i = 0; i <size; i++){
-        cout<<arr[i];
+// int main(){
+    // int arr[] = {1,4,2,6,7};
+    // int size= 5;
+    // swapTHEmin(arr,size);
+    // for(int i = 0; i <size; i++){
+    //     cout<<arr[i];
 
-    }
-    cout<<" ";
+    // }
+    // cout<<" ";
+    // int arr1[]= {2,1,5,3,5,1,6,7,8};
+    // int arr2[]= {1,4,2,6,7,3,4,3,5};
+    // int n = 9;
+    // int m = 9;
+    // intersection(arr1,n,arr2,m);
             
-
-        
-    return 0;
+    // return 0;
     
     
-
-    }
-
-    
-
-
-  
-
-
-    
-
-
+    // }
