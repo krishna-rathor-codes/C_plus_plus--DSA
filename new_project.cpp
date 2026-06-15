@@ -28,8 +28,6 @@
 // }
 
 
-
-
 // int decTObinary(int decNum) {
 //     int ans = 0;
 //     int power = 1;
@@ -53,16 +51,15 @@
 // cout<<decTObinary(23);
 
 // return 0;
-
-// }
-
+ 
 
 
 
 
-#include<iostream>
-using namespace std;
-int main(){
+
+// #include<iostream>
+// using namespace std;
+// int main(){
 
 
                                            
@@ -152,10 +149,85 @@ int main(){
 //     }
 //     cout<<endl;
 // }
+// }
+
+
+
+                                                                //Arrays
+
+
+
+#include<iostream>
+#include <climits>
+using namespace std;
+
+
+// int sumANDmul(int arr[], int size){
+//     int sum = 0;
+//     int mul = 1;
+//     for(int i =0; i<size; i++){
+//         sum += arr[i];
+//         mul *= arr[i];
+//     }
+//     cout<<sum<<endl;
+//     cout<<mul<<endl;
+    
+//     return 0;
+
+// }
+
+
+int swapTHEmin(int arr[],int size){
+    int smallest = 0;
+    int largest = 0;
+    for(int i = 0 ; i<size; i++){
+        if(arr[i]<smallest){
+            smallest = i;
+
+        }
+        if(arr[i]>largest){
+            largest = i;
+        }
+
+
+        }
+        
+        
+        cout<<"minimum value is : "<<smallest<<endl;
+        cout<<"maximum value is  : "<<largest<<endl; 
+        swap(arr[smallest],arr[largest]);
+        
+
+        return 0;
+    }
 
 
 
 
+int main(){
+    int arr[] = {1,4,2,6,7};
+    int size= 5;
+    swapTHEmin(arr,size);
+    for(int i = 0; i <size; i++){
+        cout<<arr[i];
+
+    }
+    cout<<" ";
+            
+
+        
+    return 0;
+    
+    
+
+    }
+
+    
 
 
-}
+  
+
+
+    
+
+
