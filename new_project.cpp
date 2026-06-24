@@ -43,8 +43,6 @@
 
 
 
-
-  
 // int main(){
 
 
@@ -52,9 +50,6 @@
 
 // return 0;
  
-
-
-
 
 
 // #include<iostream>
@@ -157,9 +152,10 @@
 
 
 
-#include<iostream>
-#include <climits>
-using namespace std;
+// #include<iostream>
+// #include <climits>
+// #include<vector>
+// using namespace std;
 
                                                 //sum and multiplication of arrys elements
 
@@ -239,6 +235,9 @@ using namespace std;
 
 
 
+
+
+
 // int main(){
     // int arr[] = {1,4,2,6,7};
     // int size= 5;
@@ -255,6 +254,95 @@ using namespace std;
     // intersection(arr1,n,arr2,m);
             
     // return 0;
-    
+
+    // vector<int> vec ={1,3,5,2,};
+    // cout<<vec[0]<<endl;
+
+    // return 0;
     
     // }
+
+
+
+
+                                                         //vector
+
+
+                                                         //linear search
+
+
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+// int linear_search(vector<int> vac){
+//     int n;
+//     cout<<"enter the search number : ";
+//     cin>>n;
+//     for(int x : vac){
+//         if(n == x){
+//             cout<<"element FOUND";
+//             return 0;
+//         }
+            
+//     }
+//     cout<<"element not FOUND";
+
+// }
+
+
+                                                             // maximum subarray sum
+
+// int maxsubarray(int arr[],int size){
+//     int n;
+//     cout<<"enter the number : ";
+//     cin>>n;
+
+//     for(int str =0; str<n ;str++){
+//         for(int end = str; end<n ; end++){
+//             for(int i = str; i<=end ; i++){
+//                 cout<<arr[i];
+//             }
+//             cout<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }
+
+
+                                                           // pair sum
+
+vector<int> pairsum(vector<int> nums, int target){
+    vector<int> ans;
+    int n = nums.size();
+
+    for(int i = 0; i<n; i++){
+        for(int j = i+1 ; j<n; j++){
+            if(nums[i] + nums[j] == target){
+                ans.push_back(i);
+                ans.push_back(j);
+                return ans;
+            }
+        }
+    }
+    return ans;
+}
+
+
+
+int main(){
+    // vector<int> vac = {1,3,5,2,6,8,9};
+    // linear_search(vac);
+
+    vector<int> nums = {1,3,5,2,6,8,9};
+    int target = 17;
+    vector<int> ans = pairsum(nums,target);
+    cout<<ans[0]<<" , "<<ans[1]<<endl;
+    return 0;
+
+}
+
+
+
