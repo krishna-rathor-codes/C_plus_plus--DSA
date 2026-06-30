@@ -312,23 +312,70 @@ using namespace std;
 // }
 
 
-                                                           // pair sum
+                                                           // pair sum 
 
-vector<int> pairsum(vector<int> nums, int target){
-    vector<int> ans;
-    int n = nums.size();
+// vector<int> pairsum(vector<int> nums, int target){
+//     vector<int> ans;
+//     int n = nums.size();
 
-    for(int i = 0; i<n; i++){
-        for(int j = i+1 ; j<n; j++){
-            if(nums[i] + nums[j] == target){
-                ans.push_back(i);
-                ans.push_back(j);
-                return ans;
+//     for(int i = 0; i<n; i++){
+//         for(int j = i+1 ; j<n; j++){
+//             if(nums[i] + nums[j] == target){
+//                 ans.push_back(i);
+//                 ans.push_back(j);
+//                 return ans;
+//             }
+//         }
+//     }
+//     return ans;
+// }
+
+
+
+                                                        // pair sum by 0(n)
+
+
+
+// vector<int> pairsumincompact(vector<int> nums,int target){
+//     vector<int> ans;
+//     int n = nums.size();
+//     int i = 0 , j = n-1;
+//     while(i<j){
+//         int pairsum = nums[i]+nums[j];
+//         if(pairsum < target){
+//             i++;
+//         }else if(pairsum > target){
+//             j--;
+//         }else{
+//             ans.push_back(i);
+//             ans.push_back(j);
+//             return ans;
+
+//         }
+            
+//     }
+// }
+
+
+                                                       //majority elements by moore's voting algorithm
+
+    int majorityElement(vector<int>& nums) {
+        int freq = 0, ans = 0;
+        for(int i = 0; i < nums.size(); i++){
+            if(freq == 0){
+                ans = nums[i];
             }
+            if(ans == nums[i]){
+                freq++;
+            }
+            else{
+                freq--;
+            }
+            
         }
-    }
-    return ans;
-}
+        return ans;
+        
+    }                                                       
 
 
 
@@ -336,10 +383,9 @@ int main(){
     // vector<int> vac = {1,3,5,2,6,8,9};
     // linear_search(vac);
 
-    vector<int> nums = {1,3,5,2,6,8,9};
-    int target = 17;
-    vector<int> ans = pairsum(nums,target);
-    cout<<ans[0]<<" , "<<ans[1]<<endl;
+    vector<int> nums = {5,2,5,6,5};
+    int ans = majorityElement(nums);
+    cout<<ans<<endl;
     return 0;
 
 }
